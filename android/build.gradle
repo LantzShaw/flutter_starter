@@ -1,8 +1,14 @@
 buildscript {
     ext.kotlin_version = '1.7.10'
     repositories {
-        google()
-        mavenCentral()
+        // google()
+        // mavenCentral()
+
+        maven { url 'https://maven.aliyun.com/repository/google' } // 放第1个
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' } // 放第2个
+        maven { url 'https://maven.aliyun.com/repository/central'} // 放第3个
+        maven { url 'https://maven.aliyun.com/repository/jcenter'} // 放第4个
+        maven { url 'https://maven.aliyun.com/repository/public' } // 放第5个
     }
 
     dependencies {
@@ -13,10 +19,24 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        // google()
+        // mavenCentral()
+
+    
+        // maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/central'}
+        maven { url 'https://maven.aliyun.com/repository/jcenter'}
+        maven { url 'https://maven.aliyun.com/repository/public' }
     }
 }
+
+// android {
+//     defaultConfig {
+//         minSdkVersion 19
+//     }
+// }
 
 rootProject.buildDir = '../build'
 subprojects {

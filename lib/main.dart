@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/screens/screens.dart'
+    show ProfileScreen, HomeScreen;
 import 'package:http/http.dart' as http;
 
 class Todos {
@@ -39,8 +41,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        highlightColor: Colors.transparent,
+        splashFactory: NoSplash.splashFactory,
+        textButtonTheme: const TextButtonThemeData(
+          // 去掉 TextButton 的水波纹效果
+          style: ButtonStyle(
+            splashFactory: NoSplash.splashFactory,
+          ),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: ProfileScreen(),
     );
   }
 }
