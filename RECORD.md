@@ -90,6 +90,22 @@ defaultConfig {
 
 6. [Modal 的使用](https://www.educative.io/answers/how-to-use-modal-in-flutter)
 
+7. [gradle 配置说明](https://juejin.cn/post/7160337743552675847)
+
+8. [Flutter 打包 android](https://juejin.cn/post/7207078219215929402)
+
+9. [Flutter 打包 ios](https://juejin.cn/post/7209653045310210108)
+
+### Questions
+
+1. Flutter 项目中的 build.gradle 中报 GradleException
+
+```sh
+# 解决方法：删除掉 new 关键字即可
+
+# 原因：可能是Gradle版本不支持该语法吧。
+```
+
 ### Project Reference
 
 https://github.com/hasancse91/flutter_getx_template/tree/master
