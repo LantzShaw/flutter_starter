@@ -109,3 +109,23 @@ defaultConfig {
 ### Project Reference
 
 https://github.com/hasancse91/flutter_getx_template/tree/master
+
+splash -> HomeScreen (包含 navigation bar)
+
+layout -> navigation bar
+
+路由不分层级
+
+/ ->
+
+/splash ->
+
+home
+
+### Getx Folder Structure
+
+modules
+home
+controllers -> home_controller
+bindings -> home_binding
+views -> home_view
