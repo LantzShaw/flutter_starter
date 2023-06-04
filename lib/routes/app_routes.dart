@@ -1,5 +1,5 @@
 abstract class Routes {
-  // TODO: 语法表示什么意思
+  // TODO: “_” 表示一个私有的命名构造函数，在别的地方无法使用
   Routes._();
 
   static const home = _Paths.home;

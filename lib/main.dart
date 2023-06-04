@@ -3,6 +3,8 @@ import 'dart:developer' as developer;
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_starter/screens/category/category_screen.dart';
+import 'package:flutter_starter/screens/home/home_screen.dart';
 import 'package:http/http.dart' as http;
 
 import 'models/todo.dart';
@@ -12,9 +14,9 @@ void main() {
     SystemUiOverlayStyle style = const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
 
-        ///这是设置状态栏的图标和字体的颜色
-        ///Brightness.light  一般都是显示为白色
-        ///Brightness.dark 一般都是显示为黑色
+        /// 这是设置状态栏的图标和字体的颜色
+        /// Brightness.light  一般都是显示为白色
+        /// Brightness.dark 一般都是显示为黑色
         statusBarIconBrightness: Brightness.dark);
     SystemChrome.setSystemUIOverlayStyle(style);
   }
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         highlightColor: Colors.transparent,
         splashFactory: NoSplash.splashFactory,
+        // brightness: Brightness.light,
         textButtonTheme: const TextButtonThemeData(
           // 去掉 TextButton 的水波纹效果
           style: ButtonStyle(
@@ -42,8 +45,14 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      // onGenerateRoute: ,
+      // routes: {
+      //   '/': (context) => HomeScreen(),
+      // },
+      // initialRoute: '/splash',
       // home: const ProfileScreen(),
-      home: const MyHomePage(title: 'Flutter Demo'),
+      // home: const MyHomePage(title: 'Flutter Demo'),
+      home: const CategoryScreen(),
     );
   }
 }
@@ -106,16 +115,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   elevation: 10.0,
-      //   // backgroundColor: Colors.grey,
-      //   title: const Text(
-      //     'Demo',
-      //     style: TextStyle(color: Color(0xff000000)),
-      //   ),
-      //   centerTitle: true,
-      //   bottomOpacity: 0,
-      // ),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: const Text(
+          'Demo',
+          style: TextStyle(color: Color(0xff000000)),
+        ),
+        centerTitle: true,
+        bottomOpacity: 0,
+      ),
       bottomNavigationBar: BottomAppBar(
         color: const Color.fromARGB(255, 253, 255, 254),
         shape: const CircularNotchedRectangle(),
@@ -123,7 +132,24 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigator.of(context).push(
+                //   MaterialPageRoute(
+                //     builder: (context) => HomeScreen(),
+                //   ),
+                // );
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
+
+                // Navigator.pop(context);
+
+                // Navigator.pushNamed(context, '/splash');
+              },
               icon: const Icon(Icons.home),
             ),
             const SizedBox(),

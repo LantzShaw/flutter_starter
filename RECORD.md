@@ -1,10 +1,19 @@
 ### Code
 
+```shell
+android studio 自动添加const 使用命令 dart fix --applay, android studio暂时无法自动添加const
+
+vscode 可以
+
+```
+
 ```dart
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -129,3 +138,62 @@ home
 controllers -> home_controller
 bindings -> home_binding
 views -> home_view
+services -> home
+routes -> app_routes.dart / app_pages.dart
+
+### Provider Folder Structure
+
+screens -> user/user_screen.dart
+providers -> user/user.dart
+models -> user/user_model.dart
+widgets -> card.dart
+services -> card.dart
+routes ->
+
+
+### flutter folder structure
+
+assets
+   fonts
+   images
+      sign_up
+      sign_in
+   icons
+   videos
+   logo
+lib
+   src | app
+      widgets | common_widgets
+         button
+         form
+      themes
+      constants
+         colors.dart
+         sizes.dart
+         text_strings.dart
+         image_strings.dart
+      routes
+      localization | i10n
+      utils | shared | helpers
+      features
+         authentication
+            models
+               user_model.dart
+            controllers
+               user_controller.dart
+            screens
+               sign_in
+                  widgets/
+                  sign_in_screen.dart
+               sign_up
+                  sign_up_screen.dart
+            services
+               user_service.dart
+         core
+            controllers
+            models
+            screens
+      app.dart -> bottom_navigation      
+   main.dart
+packages
+   lib
