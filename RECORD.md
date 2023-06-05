@@ -196,4 +196,9 @@ lib
       app.dart -> bottom_navigation      
    main.dart
 packages
-   lib
+   pkg_1
+      lib
+      pubspec.yaml
+pubspec.yaml
+   pkg_1:
+      path: ./packages/pkg_1
