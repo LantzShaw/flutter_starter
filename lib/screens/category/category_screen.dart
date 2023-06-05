@@ -64,11 +64,9 @@ class CategoryScreen extends StatelessWidget {
               cursorColor: Colors.red,
               decoration: InputDecoration(
                 border: InputBorder.none,
-                prefixIcon: Icon(Icons.search),
                 hintText: '请输入',
-                hintStyle: TextStyle(
-                  color: Color(0xFFFF4400),
-                ),
+                prefixIcon: Icon(Icons.search),
+                hintStyle: TextStyle(color: Color(0xFFFF4400)),
               ),
             ),
           )
