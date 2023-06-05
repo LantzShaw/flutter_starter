@@ -202,3 +202,17 @@ packages
 pubspec.yaml
    pkg_1:
       path: ./packages/pkg_1
+
+
+### 快捷键
+```shell
+fn + left/start right/end 行首、行尾
+
+ctrl + alt + space 代码提示 / 参数提示
+
+alt + enter 代码修复（wrap widget...）
+
+ctrl + enter 当前插入
+
+构造函数
+````
